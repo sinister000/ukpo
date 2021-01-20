@@ -3,6 +3,7 @@ package structures;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Hashtable<K, V> {
 
@@ -160,6 +161,10 @@ public class Hashtable<K, V> {
             table.set(i, null);
         }
         numElements = 0;
+    }
+
+    public List<K> keys() {
+        return table.stream().map(Entry::getKey).collect(Collectors.toList());
     }
 
     private void increaseTable() {
