@@ -171,6 +171,11 @@ public class Hashtable<K, V> {
         return table.stream().map(Entry::getValue).collect(Collectors.toList());
     }
 
+    public V getOrDefault(K key, V defaultValue) {
+        V value = get(key);
+        return (null == value) ? defaultValue : value;
+    }
+
     private void increaseTable() {
         int oldSize = capacity;
         List<Entry<K, V>> oldTable = table;
