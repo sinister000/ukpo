@@ -167,6 +167,10 @@ public class Hashtable<K, V> {
         return table.stream().map(Entry::getKey).collect(Collectors.toList());
     }
 
+    public List<V> values() {
+        return table.stream().map(Entry::getValue).collect(Collectors.toList());
+    }
+
     private void increaseTable() {
         int oldSize = capacity;
         List<Entry<K, V>> oldTable = table;
