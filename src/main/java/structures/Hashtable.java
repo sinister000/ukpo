@@ -164,7 +164,7 @@ public class Hashtable<K, V> {
     }
 
     public List<K> keys() {
-        return table.stream().map(Entry::getKey).collect(Collectors.toList());
+        return table.stream().filter(Objects::nonNull).map(Entry::getKey).collect(Collectors.toList());
     }
 
     private void increaseTable() {
