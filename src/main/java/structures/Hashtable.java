@@ -168,7 +168,7 @@ public class Hashtable<K, V> {
     }
 
     public List<V> values() {
-        return table.stream().map(Entry::getValue).collect(Collectors.toList());
+        return table.stream().filter(Objects::nonNull).map(Entry::getValue).collect(Collectors.toList());
     }
 
     public V getOrDefault(K key, V defaultValue) {
