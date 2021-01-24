@@ -19,7 +19,7 @@ public class NewHashtableTest {
         hashtable.put(3, "three");
         hashtable.put(4, "four");
 
-        List<Integer> expected = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4, 100500));
         assertEquals(expected, hashtable.keys());
     }
 
