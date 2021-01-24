@@ -17,10 +17,10 @@ jobs:
       with:
         java-version: 1.8
     - name: clean
-      run: mvn clean install -X -e -DskipTests
+      run: mvn clean install -DskipTests
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
     - name: dependencies tree
       run: mvn dependency:tree
     - name: run tests
-      run: mvn clean test -Dtest=HashtableTest
+      run: mvn clean test -X -e -Dtest=HashtableTest
