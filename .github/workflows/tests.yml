@@ -23,4 +23,4 @@ jobs:
 #    - name: skip tests
 #      run: mvn install -DskipTests
     - name: run tests
-      run: mvn -Dtest=HashtableTest test
+      run: mvn clean test -Dtest=HashtableTest
