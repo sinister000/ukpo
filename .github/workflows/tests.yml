@@ -21,6 +21,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
     - name: dependencies tree
-      run: mvn dependencies::tree
+      run: mvn dependency:tree
     - name: run tests
       run: mvn clean test -Dtest=HashtableTest
