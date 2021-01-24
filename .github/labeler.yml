@@ -1,0 +1,2 @@
+theme:tests:
+  - "src/test/HashtableTest.java"
