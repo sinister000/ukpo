@@ -1,0 +1,11 @@
+name: "Verify label"
+
+on: push
+
+jobs:
+  triage:
+    runs-on: windows-latest
+    steps:
+      - uses: zwaldowski/match-label-action@v2
+        with:
+          allowed: 'type:tests'
