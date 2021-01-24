@@ -17,7 +17,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml test -Dtest=HashtableTest 
+      run: mvn -B package --file pom.xml test -Dtest=HashtableTest
+    - name: clean
+      run: mvn clean install -U    
 #    - name: skip tests
 #      run: mvn install -DskipTests
 #    - name: run tests
