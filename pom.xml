@@ -28,7 +28,6 @@
                     <includes>
                         <include>HashtableTest.java</include>
                     </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
 
