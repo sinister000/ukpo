@@ -19,9 +19,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
     - name: clean
-      run: mvn clean install -U test -Dtest=HashtableTest
+      run: mvn clean install -U
 #    - name: skip tests
 #      run: mvn install -DskipTests
-#    - name: run tests
-#      uses: mvn test
-#      uses: mvn -Dtest=HashtableTest test
+    - name: run tests
+      run: mvn -Dtest=HashtableTest test
