@@ -14,7 +14,7 @@ public class HashtableTest {
     public void getByNotNullExistingKey_shouldReturnValue() {
         Hashtable<Integer, String> hashtable = new Hashtable<>(3);
         hashtable.put(0, "zero");
-        assertEquals("zero", hashtable.get(0));
+        assertEquals("fgnfgnfg", hashtable.get(0));
     }
 
     @Test
